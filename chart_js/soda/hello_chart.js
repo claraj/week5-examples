@@ -1,7 +1,7 @@
 
-var canvas = document.getElementById('soda-chart')
+let canvas = document.querySelector('#soda-chart')
 console.log(canvas)
-var ctx = canvas.getContext('2d')
+let ctx = canvas.getContext('2d')
 
 chart = new Chart(ctx, {
     type: 'bar',
