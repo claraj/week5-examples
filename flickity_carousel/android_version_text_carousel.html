@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Flickity JS and CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <style>
+        body {
+            background: #669973;
+            color: whitesmoke;
+        }
+
+        .main-carousel {
+            margin-bottom: 50px;
+        }
+
+        .carousel-cell {
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            font-size: 40px;
+            position: absolute;
+            transform: translateY(-20%);
+            top: 50%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1>Select your Android Version</h1>
+
+
+<div class="main-carousel">
+    <div class="carousel-cell">
+        KitKat
+    </div>
+    <div class="carousel-cell">
+        Lollipop
+    </div>
+    <div class="carousel-cell">
+        Marshmallow
+    </div>
+    <div class="carousel-cell">
+        Nougat
+    </div>
+    <div class="carousel-cell">
+        Oreo
+    </div>
+    <div class="carousel-cell">
+        Pie
+    </div>
+            
+</div>
+
+<p id="selected">
+
+</p>
+
+<script>
+
+    let flickity = new Flickity( '.main-carousel', {
+        // Options go here - see Flickity documentation
+        wrapAround: true,
+    })
+
+    // Event listener for user clicking on one of the carousel cells
+    flickity.on('staticClick', function(event, pointer, cellElement, cellIndex ) {
+        let androidVersion = cellElement.innerHTML
+        let selectedVersion = document.querySelector('#selected')
+        selectedVersion.innerHTML = `You have selected ${androidVersion}`
+    })
+
+</script>
+
+</body>
+</html>
