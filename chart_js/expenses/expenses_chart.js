@@ -38,7 +38,7 @@ function addExpenseToChart(name, amount) {
     // How many colors have been used so far? 
     let colorCount = expensesChart.data.datasets[0].backgroundColor.length
     // Push the next color from the chartColor list 
-    // cycle back to the start of the list, if they've all been used already
+    // cycle back to the start of the list, if they've all been used 
     expensesChart.data.datasets[0].backgroundColor.push(chartColors[colorCount % chartColors.length])
 
     expensesChart.update()
@@ -76,11 +76,19 @@ addExpenseButton.addEventListener('click', function() {
 
 })
 
-/* Event listener to click the Add Expense button when Enter key is pressed */
+/* Event listener to click the Add Expense button when Enter key is pressed,
+but only if the focus is on one of the input elements  */
 
 window.addEventListener('keyup', function(event) {
-    // If enter key is pressed, then click the Add Expense button
+    // Check if enter key is pressed, which has keyCode 13
     if (event.keyCode === 13) {
-        addExpenseButton.click()
+        // And if the focus is on one of the inputs, then click the addExpenseButton
+        let inputElements = [ expenseNameInput, expenseAmountInput, addExpenseButton ] 
+        if ( inputElements.includes(document.activeElement) ) {
+            addExpenseButton.click()
+        }
     }
 })
+
+
+
