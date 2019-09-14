@@ -8,7 +8,6 @@ let chartCanvas = document.querySelector('#expenses-doughnut-chart')
 let ctx = chartCanvas.getContext('2d')
 
 
-
 // TODO create chart object 
 
 
@@ -17,7 +16,9 @@ let chartColors = [ 'tomato', 'orange', 'dodgerblue', 'mediumseagreen', 'slatebl
 
 
 function addExpenseToChart(name, amount) {
-    // TODO finish this function 
+    
+    // TODO add expense to chart 
+
 }
 
 
@@ -43,7 +44,6 @@ addExpenseButton.addEventListener('click', function() {
         return
     }
 
-    
     // TODO call function to update chart
 
 
