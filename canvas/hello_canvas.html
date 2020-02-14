@@ -21,13 +21,13 @@
 <script>
 
   //Find the canvas element in this document
-  var canvas = document.getElementById("canvas");
+  let canvas = document.getElementById("canvas")
   // A context object will be used to draw on the canvas
-  var context = canvas.getContext("2d");
+  let context = canvas.getContext("2d")
 
   // Draw a rectangle, filled with the default color (which is black)
   // The arguments are (top left corner x, top left corner y, width, height)
-  context.fillRect(20, 20, 100, 100);
+  context.fillRect(20, 20, 100, 100)
 
   // stroke functions draw lines.
   context.strokeRect(150, 20, 100, 100)

@@ -23,26 +23,26 @@
 <script>
 
   //Find the canvas element in this document
-  var canvas = document.getElementById("canvas");
+  let canvas = document.getElementById("canvas")
   // A context object will be used to draw on the canvas
-  var context = canvas.getContext("2d");
+  let context = canvas.getContext("2d")
 
-  context.fillStyle = 'purple';
+  context.fillStyle = 'purple'
 
-  var squareShowing = false;
+  let squareShowing = false
 
   // setInterval - do a task repeatedly. Specify a task to do, like the function name to call,
   // and the time between repeats in milliseconds. 1000 milliseconds == 1 seconds.
   // setInterval( nameOfFunction, timeBetweenCallingFunctionInMs )
-  setInterval(drawSquare, 1000);
+  setInterval(drawSquare, 1000)
 
   function drawSquare() {
 
     if (squareShowing) {
-      context.clearRect(0, 0, 300, 300);
-      squareShowing = false;
+      context.clearRect(0, 0, 300, 300)
+      squareShowing = false
     } else {
-      context.fillRect(100, 50, 100, 100);
+      context.fillRect(100, 50, 100, 100)
       squareShowing = true
     }
   }

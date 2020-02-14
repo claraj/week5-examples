@@ -19,39 +19,39 @@
 
 <script>
 
-  var canvas = document.getElementById("canvas");
-  var context = canvas.getContext("2d");
+  let canvas = document.getElementById("canvas")
+  let context = canvas.getContext("2d")
 
   // Set fill color to blue, draw a filled square
   // Use fillRect, with height and width the same.
-  context.fillStyle = "#0000FF";
-  context.fillRect(20, 20, 100, 100);
+  context.fillStyle = "#0000FF"
+  context.fillRect(20, 20, 100, 100)
 
   // Set stroke color to red, draw the outline of a square
-  context.strokeStyle = "red";
-  context.strokeRect(140, 20, 100, 100);
+  context.strokeStyle = "red"
+  context.strokeRect(140, 20, 100, 100)
 
   //draw a couple of rectangles
-  context.strokeRect(270, 20, 50, 100);
-  context.strokeStyle = "purple";
-  context.strokeRect(260, 40, 110, 50);
+  context.strokeRect(270, 20, 50, 100)
+  context.strokeStyle = "purple"
+  context.strokeRect(260, 40, 110, 50)
 
   //Draw a red rectangle with an purple line border
   //Set the stroke style and fill style, then
   //call fillRect and strokeRect with the same coordinates.
-  context.strokeStyle = "purple";
-  context.fillStyle = "gold";
-  context.fillRect(380, 20, 100, 100);
-  context.strokeRect(380, 20, 100, 100);
+  context.strokeStyle = "purple"
+  context.fillStyle = "gold"
+  context.fillRect(380, 20, 100, 100)
+  context.strokeRect(380, 20, 100, 100)
 
   //Set line width
-  context.lineWidth = 10;
-  context.strokeRect(500, 20, 100, 100);
+  context.lineWidth = 10
+  context.strokeRect(500, 20, 100, 100)
 
   //Note that each thing draws on top of previous things
-  context.strokeRect(660, 20, 50, 100);
-  context.strokeStyle = "aqua";
-  context.strokeRect(620, 40, 110, 50);
+  context.strokeRect(660, 20, 50, 100)
+  context.strokeStyle = "aqua"
+  context.strokeRect(620, 40, 110, 50)
 
 
 </script>

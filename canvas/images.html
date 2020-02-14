@@ -22,11 +22,11 @@
 
 <script>
 
-  var canvas = document.getElementById("canvas");
+  let canvas = document.getElementById("canvas")
 
 
-  let image = new Image();
-  image.src = "small-cat.jpg";
+  let image = new Image()
+  image.src = "small-cat.jpg"
 
   // Get the image to draw in the canvas
   // But, we have to make sure the image has loaded before we try and draw it.
@@ -34,12 +34,12 @@
   
   image.addEventListener('load', function(){
 
-    var context = canvas.getContext("2d");
+    let context = canvas.getContext("2d")
 
     //Draw image. drawImage works like a stamp. Specify the x,y of the top left position.
-    context.drawImage(image, 20, 20);
-    context.drawImage(image, 300, 100);
-    context.drawImage(image, 150, 300);
+    context.drawImage(image, 20, 20)
+    context.drawImage(image, 300, 100)
+    context.drawImage(image, 150, 300)
 
   })
 

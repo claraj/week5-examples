@@ -19,32 +19,32 @@
 
 <script>
 
-  var canvas = document.getElementById("canvas");
-  var context = canvas.getContext("2d");
+  let canvas = document.getElementById("canvas")
+  let context = canvas.getContext("2d")
 
   // Set fill color to blue, draw some text
-  context.fillStyle = "#0000FF";
-  context.fillText("Blue fill", 10, 10);
+  context.fillStyle = "#0000FF"
+  context.fillText("Blue fill", 10, 10)
 
   // Set stroke to green, draw more text
-  context.strokeStyle = "#00FF00";
-  context.strokeText("Green stroke", 40, 40);
+  context.strokeStyle = "#00FF00"
+  context.strokeText("Green stroke", 40, 40)
 
   //Change default text size AND font
 
-  context.strokeStyle = "#FF00FF";
-  context.font = "30px Arial";
-  context.strokeText("Large purple stroke", 80, 80);
+  context.strokeStyle = "#FF00FF"
+  context.font = "30px Arial"
+  context.strokeText("Large purple stroke", 80, 80)
 
-  context.font = "50px Courier";
-  context.fillStyle = "#FFFF00";
-  context.fillText("Large yellow courier fill", 120, 120);
+  context.font = "50px Courier"
+  context.fillStyle = "#FFFF00"
+  context.fillText("Large yellow courier fill", 120, 120)
 
   //Outlined text - fill and stroke
-  context.fillStyle = "#00FFFF";
-  context.strokeStyle = "#FF0000";
-  context.fillText("Outlined text", 170, 170);
-  context.strokeText("Outlined text", 170, 170);
+  context.fillStyle = "#00FFFF"
+  context.strokeStyle = "#FF0000"
+  context.fillText("Outlined text", 170, 170)
+  context.strokeText("Outlined text", 170, 170)
 
 </script>
 

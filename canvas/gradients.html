@@ -35,91 +35,91 @@
 
     // Horizontal gradient
 
-    var c_h = document.getElementById("canvas_horiz");
-    var ctx_h = c_h.getContext("2d");
+    let c_h = document.getElementById("canvas_horiz")
+    let ctx_h = c_h.getContext("2d")
 
     // Create a gradient
     // 'creates a gradient along the line given by the coordinates represented by the parameters.'
     // Imagine a line from (0,0) to (300,0) which is a horizontal line. So the gradient will fade
     // through the colors from left to right.
 
-    var gradient_h = ctx_h.createLinearGradient(0, 0, 300, 0);
+    let gradient_h = ctx_h.createLinearGradient(0, 0, 300, 0)
 
     // Need at least two color stops. The first argument is where to start the color
     // The values need to be in the range 0 to 1
-    gradient_h.addColorStop(0, "green");    // green at 0 pixels along the gradient line
-    gradient_h.addColorStop(0.5, "blue");   // blue in the middle
-    gradient_h.addColorStop(1, "purple");   // so purple will be at 300 px along the gradient line
+    gradient_h.addColorStop(0, "green")    // green at 0 pixels along the gradient line
+    gradient_h.addColorStop(0.5, "blue")   // blue in the middle
+    gradient_h.addColorStop(1, "purple")   // so purple will be at 300 px along the gradient line
 
     // Once the gradient is configured, set the fill style
-    ctx_h.fillStyle = gradient_h;
+    ctx_h.fillStyle = gradient_h
 
     // And fill a rectangle with it
-    ctx_h.fillRect(0, 0, 300, 300);
+    ctx_h.fillRect(0, 0, 300, 300)
 
 
 
 
     // Vertical gradient
 
-    var c_v = document.getElementById("canvas_vert");
-    var ctx_v = c_v.getContext("2d");
+    let c_v = document.getElementById("canvas_vert")
+    let ctx_v = c_v.getContext("2d")
 
     // Create a gradient
     // 'creates a gradient along the line given by the coordinates represented by the parameters.'
     // Imagine a line from (0,0) to (0, 300) which is a vertical line. So the gradient will fade
     // through the colors from top to bottom.
 
-    var gradient_v = ctx_v.createLinearGradient(0, 0, 0, 300);
+    let gradient_v = ctx_v.createLinearGradient(0, 0, 0, 300)
 
     // Need at least two color stops. The first argument is where to start the color
     // The values need to be in the range 0 to 1
-    gradient_v.addColorStop(0, "orange");    // orange at 0 pixels along the gradient line
-    gradient_v.addColorStop(0.66, "yellow");   // yellow at 200 pixels down in the gradient line
-    gradient_v.addColorStop(1, "red");   // so red will be at 300 px down the gradient line
+    gradient_v.addColorStop(0, "orange")    // orange at 0 pixels along the gradient line
+    gradient_v.addColorStop(0.66, "yellow")   // yellow at 200 pixels down in the gradient line
+    gradient_v.addColorStop(1, "red")   // so red will be at 300 px down the gradient line
 
     // Once the gradient is configured, set the fill style
-    ctx_v.fillStyle = gradient_v;
+    ctx_v.fillStyle = gradient_v
 
     // And fill a rectangle with it
-    ctx_v.fillRect(0, 0, 300, 300);
+    ctx_v.fillRect(0, 0, 300, 300)
 
 
 
     // Diagonal gradient
 
-    var c_diag = document.getElementById("canvas_diag");
-    var ctx_diag = c_diag.getContext("2d");
+    let c_diag = document.getElementById("canvas_diag")
+    let ctx_diag = c_diag.getContext("2d")
 
     // Create a gradient
     // 'creates a gradient along the line given by the coordinates represented by the parameters.'
     // Imagine a line from (0,0) to (300, 300) which is a diagonal line. So the gradient will fade
     // through the colors from top left to bottom right.
 
-    var gradient_diag = ctx_diag.createLinearGradient(0, 0, 300, 300);
+    let gradient_diag = ctx_diag.createLinearGradient(0, 0, 300, 300)
 
     // Need at least two color stops. The first argument is where to start the color
     // The values need to be in the range 0 to 1
-    gradient_diag.addColorStop(0, "black");    // black at 0 pixels along the gradient line
-    gradient_diag.addColorStop(0.33, "blue");   // blue at 1/3 of the way down  the gradient line
-    gradient_diag.addColorStop(0.66, "purple");   // purple at 2/3 of the way down the gradient line
-    gradient_diag.addColorStop(1, "black");   // black at the end
+    gradient_diag.addColorStop(0, "black")    // black at 0 pixels along the gradient line
+    gradient_diag.addColorStop(0.33, "blue")   // blue at 1/3 of the way down  the gradient line
+    gradient_diag.addColorStop(0.66, "purple")   // purple at 2/3 of the way down the gradient line
+    gradient_diag.addColorStop(1, "black")   // black at the end
 
     // Once the gradient is configured, set the fill style
-    ctx_diag.fillStyle = gradient_diag;
+    ctx_diag.fillStyle = gradient_diag
 
     // And fill a rectangle with it
-    ctx_diag.fillRect(0, 0, 300, 300);
+    ctx_diag.fillRect(0, 0, 300, 300)
 
 
 
     // Radial gradient
 
-    var c_rad = document.getElementById("canvas_radial");
-    var ctx_rad = c_rad.getContext("2d");
+    let c_rad = document.getElementById("canvas_radial")
+    let ctx_rad = c_rad.getContext("2d")
 
     // Create a gradient
-    // ctx.createRadialGradient(firstCircleX, firstCircleY, firstCircleRadius, secondCircleX, secondCircleY, secondCircleRadius);
+    // ctx.createRadialGradient(firstCircleX, firstCircleY, firstCircleRadius, secondCircleX, secondCircleY, secondCircleRadius)
     // Imagine two circles, centered at the same (or different) points.
     // The gradient is created, radiating from the first to the second circle
     // The first circle should be smaller
@@ -129,20 +129,20 @@
 
     // Circle 1 centered at 150,150 and has radius of 40
     // Circle 2 centered at 200, 200 and has radius of 200
-    var gradient_rad = ctx_rad.createRadialGradient(150, 150, 40, 200, 200, 200);  // Try playing with these numbers!
+    let gradient_rad = ctx_rad.createRadialGradient(150, 150, 40, 200, 200, 200)  // Try playing with these numbers!
 
     // Need at least two color stops. The first argument is where to start the color
     // The values need to be in the range 0 to 1
-    gradient_rad.addColorStop(0, "black");    // black at 0 pixels along the gradient line
-    gradient_rad.addColorStop(0.33, "blue");   // blue at 1/3 of the way down  the gradient line
-    gradient_rad.addColorStop(0.66, "purple");   // purple at 2/3 of the way down the gradient line
-    gradient_rad.addColorStop(1, "black");   // black at the end
+    gradient_rad.addColorStop(0, "black")    // black at 0 pixels along the gradient line
+    gradient_rad.addColorStop(0.33, "blue")   // blue at 1/3 of the way down  the gradient line
+    gradient_rad.addColorStop(0.66, "purple")   // purple at 2/3 of the way down the gradient line
+    gradient_rad.addColorStop(1, "black")   // black at the end
 
     // Once the gradient is configured, set the fill style
-    ctx_rad.fillStyle = gradient_rad;
+    ctx_rad.fillStyle = gradient_rad
 
     // And fill a rectangle with it
-    ctx_rad.fillRect(0, 0, 300, 300);
+    ctx_rad.fillRect(0, 0, 300, 300)
 
 
 

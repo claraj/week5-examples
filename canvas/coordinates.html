@@ -18,25 +18,26 @@
 
 <h2>Move your mouse over the canvas</h2>
 
+<p>Your mouse coordinates are: <span id="coordinates"></span></p>
+
 <canvas id="canvas" height="500" width="600"></canvas>
 
-<p id="coordinates"></p>
 
 <script>
 
-    var canvas = document.getElementById("canvas");
+    let canvas = document.getElementById("canvas")
 
-    canvas.addEventListener("mousemove", showCoords);
+    canvas.addEventListener("mousemove", showCoords)
 
     function showCoords() {
 
       // event is a built-in object with information
       // about the event that triggered this function
-      var x = event.offsetX;
-      var y = event.offsetY;
+      var x = event.offsetX
+      var y = event.offsetY
 
-      var p = document.getElementById("coordinates");
-      p.innerText = "Mouse x = " + x + " mouse Y = " + y;
+      var span = document.getElementById("coordinates")
+      span.innerText = "Mouse x = " + x + " mouse Y = " + y
 
     }
 
