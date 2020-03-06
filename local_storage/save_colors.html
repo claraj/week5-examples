@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Local Storage</title>
+
+  <style>
+
+    #canvas {
+      border: 1px black solid;
+    }
+
+  </style>
+
+</head>
+<body>
+
+<div>  
+What color would you like the text? 
+<br><input id="text-color" type="color">
+</div>
+
+<div>
+What color would you like the background?
+<br><input id="background-color" type="color">
+</div>
+
+
+<p>Here is some more example text. The colors are saved in local storage, so if you choose a color, 
+  and then close your browser, and re-open it, you'll see the colors you chose.</p>
+
+<p>More info here: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage</a></p>
+
+<p>If you work with local storage, open browser dev tools. In Chrome, look under the Application tab. 
+  On the left side of the dev tools window, choose Local Storage, then file:///. 
+  You can then see and work with (add, edit, delete, delete all) the stored local data </p>
+
+<img src="dev-tools-screenshot.png">
+
+<script>
+
+let bodyEl = document.querySelector('body')
+let textColorInput = document.querySelector('#text-color')
+let bgColorInput = document.querySelector('#background-color')
+
+// If colors have been set, then read from local storage
+// and use to set the style
+
+let savedBackground = localStorage.getItem('backgroundColor') 
+let savedTextColor = localStorage.getItem('textColor')
+
+if (savedBackground) {
+    bodyEl.style.background = savedBackground 
+}
+
+if (savedTextColor){
+    bodyEl.style.color = savedTextColor
+}
+
+textColorInput.addEventListener('change', function(){
+    let color = textColorInput.value
+    bodyEl.style.color = color 
+    localStorage.setItem('textColor', color)
+})
+
+bgColorInput.addEventListener('change', function(){
+    let color = bgColorInput.value
+    bodyEl.style.background = color 
+    localStorage.setItem('backgroundColor', color)
+})
+
+
+</script>
+
+</body>
+</html>
+
+
