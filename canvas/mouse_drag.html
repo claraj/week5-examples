@@ -21,21 +21,27 @@
 
 <script>
 
-  let canvas = document.getElementById("canvas")
-  let context = canvas.getContext("2d")
+  let canvas = document.querySelector('#canvas')
+  let context = canvas.getContext('2d')
   
   // Keep track of whether the mouse button has been pressed down or not.
+  // Think of this as whether the user is drawing or not, is their brush on the canvas?
   let mousedown = false 
 
-  canvas.addEventListener("mousedown", function() {
+  canvas.addEventListener('mousedown', function() {
     mousedown = true
   })
 
-  canvas.addEventListener("mouseup", function() {
+  canvas.addEventListener('mouseup', function() {
     mousedown = false 
   })
 
-  canvas.addEventListener("mousemove", function() {
+  // If mouse leaves the canvas then stop drawing
+  canvas.addEventListener('mouseout', function() {
+    mousedown = false
+  })
+
+  canvas.addEventListener('mousemove', function() {
 
     // If the mouse button is not pressed down, do not draw.
     if (!mousedown) { return }
