@@ -20,12 +20,12 @@ image.addEventListener('load', function () {
 // Add event listener to input - will fire if the text is changed
 input.addEventListener('input', function() {
     // Read the data typed in the input
-    // 'this' is the HTML element this function is called for 
+    // 'this' is the HTML element this event listener function is called for 
     let text = this.value
 
-    context.drawImage(image, 0, 0)     // Need to redraw the image - no way to clear 
-    context.font = '30px Arial'  // Set font
-    context.fillStyle = 'Black'
+    context.drawImage(image, 0, 0)  // Redraw the image, no way to clear text 
+    context.font = '30px Arial'      // Set font
+    context.fillStyle = 'darkblue'   // Set color
     context.fillText(text, 30, 100)    // And draw text.
 })
 
