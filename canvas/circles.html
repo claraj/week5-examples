@@ -26,14 +26,14 @@
   context.beginPath()
   // arc defines the circle or part of circle
   // x, y, radius, start angle, end angle
-  context.arc(100, 200, 50, 0, 2 * Math.PI)
+  context.arc(100, 200, 50, 0, 2 * Math.PI)  // 0 and 2 * Math.PI draws a whole circle
   // stroke actually draws
   context.stroke()
 
 
   context.beginPath()
   context.arc(200, 300, 50, 0, Math.PI)  // Half a circle
-  context.stroke()
+  context.fill()
 
 
   context.beginPath()

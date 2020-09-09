@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
   <title>Hello Canvas</title>
 
   <style>
-
     #canvas {
-      border: 1px black solid;
+      border: 1px black solid;   /* canvas is a white square by default */
     }
-
   </style>
 
 </head>
 <body>
 
-<!--The canvas element. Set height and width, and give it an id -->
+<!--The canvas element. Set height and width in HTML, and give it an id -->
 <canvas id="canvas" height="200" width="300"></canvas>
 
 <script>
-
   //Find the canvas element in this document
   let canvas = document.getElementById("canvas")
   // A context object will be used to draw on the canvas
@@ -29,12 +25,13 @@
   // The arguments are (top left corner x, top left corner y, width, height)
   context.fillRect(20, 20, 100, 100)
 
-  // stroke functions draw lines.
+  // stroke version of this function draw lines. Arguments same as fillRect.
   context.strokeRect(150, 20, 100, 100)
-
 </script>
 
 </body>
 </html>
+
+
 
 

@@ -22,6 +22,8 @@
   let canvas = document.getElementById("canvas")
   let context = canvas.getContext("2d")
 
+  // Reset any previous lines and start a new path
+  context.beginPath()
   // Use moveTo to define the start point of a line
   context.moveTo(10, 10)
   // use lineTo to define the end point of the line
@@ -29,17 +31,27 @@
   // use stroke to actually draw the line
   context.stroke()
 
-
   // Can draw many line segments
-  // start with a moveTo call
+  // start with a beginPath and a moveTo call
   // call lineTo to define the segments
   // call stroke to actually draw
-
+  context.beginPath()
   context.moveTo(200, 300)
   context.lineTo(200, 100)
   context.lineTo(60, 100)
   context.lineTo(200, 300)
+  context.strokeStyle = 'blue'
+  context.lineWidth = 5
   context.stroke()
+
+  // Optionally set color with strokeStyle and/or lineWidth
+  context.beginPath()
+  context.moveTo(220, 50)
+  context.lineTo(300, 200)
+  context.strokeStyle = 'magenta'
+  context.lineWidth = 20
+  context.stroke()
+
 
 </script>
 
