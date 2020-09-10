@@ -37,9 +37,13 @@ function addExpenseToChart(name, amount) {
 
     // How many colors have been used so far? 
     let colorCount = expensesChart.data.datasets[0].backgroundColor.length
-    // Push the next color from the chartColor list 
+
+    // What's the next color?
     // cycle back to the start of the list, if they've all been used 
-    expensesChart.data.datasets[0].backgroundColor.push(chartColors[colorCount % chartColors.length])
+    let color = chartColors[colorCount % chartColors.length]
+    
+    // Push the next color from the chartColor list 
+    expensesChart.data.datasets[0].backgroundColor.push(color)
 
     expensesChart.update()
 }
@@ -85,7 +89,8 @@ window.addEventListener('keyup', function(event) {
         // And if the focus is on one of the inputs, then click the addExpenseButton
         let inputElements = [ expenseNameInput, expenseAmountInput, addExpenseButton ] 
         if ( inputElements.includes(document.activeElement) ) {
-            addExpenseButton.click()
+            addExpenseButton.click()  // click button
+            expenseNameInput.focus()  // move focus to expense name input, for convenience of entering new expense 
         }
     }
 })
