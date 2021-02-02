@@ -14,20 +14,20 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // Add some markers for Minneapolis College and Saint Paul College
 let mctcCoordinates = [44.9724, -93.2844]
 let mctcMarker = L.marker(mctcCoordinates)
-    .bindPopup("Minnepolis College<br><a href='https://minneapolis.edu'>Website</a>")
+    .bindPopup('Minnepolis College<br><a href="https://minneapolis.edu">Website</a>')
     .addTo(map)
 
 let stPaulCoordinates = [44.94839, -93.1099]
 let stpMarker = L.marker(stPaulCoordinates)
-    .bindPopup("Saint Paul College<br><a href='https://saintpaul.edu'>Website</a>")
+    .bindPopup('Saint Paul College<br><a href="https://saintpaul.edu">Website</a>')
     .addTo(map)
 
 
 // Add a circle approximately around the Twin Cities metro 
 let metroAreaCircle = L.circle(metroAreaCenterCoordinates, {
-        color: 'green',  
+        color: 'green',    // use any CSS color name
         radius: 30000,
-        fillOpacity: 0.2
+        fillOpacity: 0.1
     })
     .bindPopup("Twin Cities Metro Area")
     .addTo(map)
