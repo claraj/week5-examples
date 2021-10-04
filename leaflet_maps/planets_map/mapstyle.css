@@ -1,0 +1,12 @@
+#mars-map {
+    width: 600px;
+    height: 500px;
+    border: 1px orangered solid;
+}
+
+#moon-map {
+    width: 600px;
+    height: 500px;
+    border: 1px gray solid;
+}
+

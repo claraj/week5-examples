@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Leaflet script and CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+    
+    <!-- Our stylesheet. Make sure the size of the map div is set before trying to draw the map.-->
+    <link rel="stylesheet" type="text/css" href="mapstyle.css">
+    <!-- Our script, uses Leaflet to draw the maps and map components for this page  -->
+    <script async defer src="maps.js"></script>
+
+</head>
+<body>
+
+    <h1>Planetary Maps</h1>
+
+    <p>Tile layers from <a href="https://www.openplanetary.org/opm/basemaps">https://www.openplanetary.org/opm/basemaps</a></p>
+
+    <h2>A map of Mars!</h2>
+    <div id="mars-map"></div>
+
+    <h2>A map of the moon!</h2>
+    <div id="moon-map"></div>
+
+</body>
+</html>
+
+
