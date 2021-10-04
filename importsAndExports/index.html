@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+
+    <script type="module" src="script.js"></script>
+    
+</head>
+<body>
+
+    <h1>Modules in client-side JavaScript</h1>
+
+    <p>
+        This page has two JavaScript files, script.js and data.js. 
+        Script.js is the main code file, and it would like to import data.js.
+
+    </p>
+
+    <p>The following data was read from a module by the script file,</p>
+
+    <div id="example-data">
+
+    </div>
+
+    <ul>
+        <li>Include only script.js and include <code>type="module</code> attribute in the script tag.</li>
+        <li>data.js needs to export whatever other script files will need, examples <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export</a> </li>
+        <li>script.js will import whatever it needs from data.js. Examples <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import</a></li>
+        <li>To view this page, you'll need to serve it from a web server. WebStorm will do this for you, when you open a page from the WebStorm IDE using the browser icons in the top left.</li>
+        <li>Not using WebStorm? Install Node.js and then run <code>npx http-server</code> from the directory your HTML file is in, to start a basic HTTP server.  You'll see output from the command with a URL you can use to view your page. It will be easier if your file is already called index.html otherwise add the html file name to the end of the URL.</li>
+    </ul>
+    </p>
+   
+
+
+</body>
+</html>
